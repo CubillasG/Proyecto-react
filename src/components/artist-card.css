@@ -1,0 +1,10 @@
+p{
+    font-size: 30px;
+    color: brown;
+}
+.pic{
+    border-radius: 50%;
+    width: 180px;
+    box-shadow: black 5px 5px 5px 0px;
+
+}
