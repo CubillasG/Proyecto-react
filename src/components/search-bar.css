@@ -1,0 +1,33 @@
+.buscador{
+    display: flex;
+    border-radius: 40px;
+    border: 1px black solid;
+    box-shadow: none;
+    border-radius: 24px;
+    z-index: 3;
+    height: 44px;
+    margin-top: 10px;
+    width: 100%;
+}
+.buscador:hover{
+    box-shadow: rgb(247, 220, 215);
+    border-color: white;
+}
+input{
+    background-color: transparent !important;
+    border: none;
+    margin: 0;
+    padding: 0px;
+    color: rgb(0, 0, .87);
+    word-wrap: break-word;
+    outline:none;
+    display: flex;
+    padding: 15px;
+    -webkit-tap-highlight-color: transparent;
+
+
+}
+.logo{
+    width: 70px;
+    margin: 10px;
+}
