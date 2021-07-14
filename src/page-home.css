@@ -1,0 +1,52 @@
+.centrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+
+}
+.centrar{
+    text-align: center;
+
+}
+#logo{
+    width: 250px;
+    margin: 30px;
+}
+.buscador{
+    background: #fff;
+    display: flex;
+    border-radius: 8px;
+    border: 1px, solid, #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    height: 44px;
+    margin: 0 auto;
+}
+.buscador:hover{
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.20);
+    border-color: rgba(223,225,229,0);
+}
+input{
+    background-color: transparent !important;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: rgba(0,0,0, .87);
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    flex: 100%;
+    padding: 15px;
+    -webkit-tap-highlight-color: transparent;
+}
+.btng{
+    border-radius: 15px;
+    border: grey, solid;
+  
+}
+.actions{
+    text-align: center;
+    width: 100%;
+}
+
