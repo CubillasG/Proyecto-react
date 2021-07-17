@@ -15,9 +15,14 @@ class PageSearchResult extends Component{
   render(){
     return(
       <React.Fragment>
-        <SearchBar onChange={this.ChangeHandle} 
-                   buscador = {this.state.buscador}/>
+       
+        <SearchBar 
+        onChange={this.HandleChange} 
+        buscador = {this.state.buscador}
+        />
         <SearchResult buscador = {this.state.buscador}/>
+
+   
       </React.Fragment>
     )
   }
