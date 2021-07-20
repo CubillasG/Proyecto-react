@@ -5,19 +5,19 @@ import PageArtist from './page-artist.js';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
-import Footer from './components/footer.js';
+import Layout from './components/Layout.js';
 
 class App extends Component{
   render(){
     return(
     <BrowserRouter>
-    <Footer>
+    <Layout>
     <switch>
       <Route exact path='/busqueda' component={PageSearchResult}></Route>
       <Route exact path='/artista' component={PageArtist}></Route>
       <Route exact path='/' component={PageHome}></Route>
     </switch>
-    </Footer>
+    </Layout>
     </BrowserRouter>
     
     )

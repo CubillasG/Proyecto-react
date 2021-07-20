@@ -5,14 +5,17 @@ import SearchResult from './components/search-result.js'
 import './App.css';
 
 class PageSearchResult extends Component{
-  state = {buscador :''
-};
+  state = {};
+  componentWillMount(){
+    console.log('componentWillMount()', 'antes de que se renderice la cosa')
+  }
   ChangeHandle = e =>{
     this.setState({ 
       [e.target.name]: e.target.value
     });
   }
   render(){
+    console.log('render()', 'metodo render')
     return(
       <React.Fragment>
        
