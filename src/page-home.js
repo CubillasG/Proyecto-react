@@ -2,6 +2,19 @@ import React  from "react";
 import "./page-home.css";
 import logo from './logoo.png'
 class PageHome extends React.Component{
+    handleSubmit = e =>{
+        e.preventDefault();
+        this.props.history.push('/busqueda?' + this.state.busqueda);
+    };
+    onChange = e =>{
+        this.setState({
+            busqueda: e.target.value
+        })
+    }
+    state = {
+        busqueda: ''
+    }
+
     render(){
         return(
            <div className='container' className='centrado'>
@@ -20,11 +33,12 @@ class PageHome extends React.Component{
                                 id='buscar'
                                 value={this.props.buscador}
                                 placeholder="Busca una banda"
-                                onChange = {this.props.onChange}
+                                onChange = {this.onChange}
                              />
                          </div>
                         <div className='actions'>
-                            <button className='btng'>search similar artis</button>
+                            <button className='btng'type='submit'>
+                                search similar artis</button>
                             <button className='btng'>nuevos artistas</button>
                         </div>
                     </form>

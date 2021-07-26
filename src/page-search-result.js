@@ -5,13 +5,21 @@ import SearchResult from './components/search-result.js'
 import './App.css';
 
 class PageSearchResult extends Component{
-  state = {};
+  state = {
+    busqueda : ''
+  };
   componentWillMount(){
+    let search = this.props.history.location.search
+    console.log(search, 'lo que me trae la URL')  
     console.log('componentWillMount()', 'antes de que se renderice la cosa')
+    this.setState({
+      busqueda: search
+    })
   }
+
   ChangeHandle = e =>{
     this.setState({ 
-      [e.target.name]: e.target.value
+      busqueda: e.target.value
     });
   }
   render(){
