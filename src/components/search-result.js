@@ -17,6 +17,7 @@ class SearchResult extends Component{
     this.fetchData('https://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=calamaro&api_key=16c5a52ffcbc782264f1bf95f8e152c7&format=json'
     );
   }
+  
   fetchData = async url=>{
     this.setState({
       loading: true,
