@@ -39,6 +39,14 @@ class PageSearchResult extends Component{
       }
     }
 };
+
+componentDidUpdate(prevProps){
+  if(this.props.location !== prevProps.location){
+    this.fetchData()
+  }
+}
+
+
   ChangeHandle = e =>{
     this.setState({ 
       [e.target.name]: e.target.value
@@ -46,15 +54,15 @@ class PageSearchResult extends Component{
   }
 
   componentDidMount(){
-     let artista = this.props.history.location.search.substr(1)
-    this.fetchData(
-      'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist='+artista+'&api_key=16c5a52ffcbc782264f1bf95f8e152c7&format=json',
-      
-    );
+     
+    this.fetchData();
   }
 
 
-  fetchData = async url=>{
+  fetchData = async ()=>{
+    let artista = this.props.history.location.search.substr(1);
+    let url = 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist='+artista+'&api_key=16c5a52ffcbc782264f1bf95f8e152c7&format=json';
+
     this.setState({
       loading: true,
   })
