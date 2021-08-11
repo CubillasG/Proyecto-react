@@ -7,7 +7,7 @@ function Error(props){
            <div className='load'>
            <div className='row'>
                <div className='col-md-12 centrado'>
-                <h3>Error!{this.props.errorMensaje}</h3>
+                <h3>Error!{this.props.errorMensage}</h3>
                </div>
            </div>
            </div>

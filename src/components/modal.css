@@ -1,0 +1,18 @@
+.modale{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    z-index: 234;
+}
+.salir{
+    float: right;
+}
+.cardModal1{
+    background: white;
+    width: 400px;
+    height: 400px;
+}

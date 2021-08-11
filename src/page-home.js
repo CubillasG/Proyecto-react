@@ -1,18 +1,38 @@
 import React  from "react";
 import "./page-home.css";
-import logo from './logoo.png'
+import logo from './logoo.png';
+import { ETIME } from "constants";
+import reactDom from "react-dom";
+import Modal from './components/modal';
+
 class PageHome extends React.Component{
     handleSubmit = e =>{
         e.preventDefault();
         this.props.history.push('/busqueda?' + this.state.busqueda);
     };
+    handleClick= e =>{
+        console.log('ME PINCHAROOOON')
+        e.preventDefault();
+        this.setState({
+            modal: true
+        });
+
+    }
+
     onChange = e =>{
         this.setState({
             busqueda: e.target.value
         })
     }
     state = {
-        busqueda: ''
+        busqueda: '',
+        modal: false
+    };
+
+    componentWillReceiveProps(e){
+        this.setState({
+            estado: e.estado
+        })
     }
 
     render(){
@@ -39,11 +59,15 @@ class PageHome extends React.Component{
                         <div className='actions'>
                             <button className='btng'type='submit'>
                                 search similar artis</button>
-                            <button className='btng'>nuevos artistas</button>
+                            <button className='btng' onClick={this.handleClick}>nuevos artistas</button>
                         </div>
                     </form>
                     </div>
                </div>
+               {reactDom.createPortal(<Modal estado={this.state.modal}>
+                   <h3>Agita Rock</h3>
+                   </Modal>, 
+                   document.getElementById('portal'))}
            </div>
         )
     }
